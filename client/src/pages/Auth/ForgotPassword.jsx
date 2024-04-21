@@ -28,7 +28,7 @@ const ForgotPassword = ({ sidebar }) => {
         e.preventDefault();
 
         try {
-            const url = 'http://localhost:8000/api/auth/forgot-password';
+            const url = 'https://portfolio-backend-nine-lilac.vercel.app/api/auth/forgot-password';
             const res = await fetch(url, {
                 method: 'POST',
                 headers: {
