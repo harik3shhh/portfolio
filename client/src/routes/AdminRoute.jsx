@@ -9,7 +9,7 @@ export default function AdminRoute(){
     const [auth, setAuth] = useAuth();
 
     useEffect(()=> {
-        const url = "http://localhost:8000/api/auth/admin-auth";
+        const url = "https://portfolio-backend-nine-lilac.vercel.app/api/auth/admin-auth";
         const authCheck = async()=>{
             const res = await fetch(url, {
                 method: "GET",
