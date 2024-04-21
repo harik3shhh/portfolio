@@ -18,7 +18,7 @@ const Users = () => {
         }
       };
 
-      const { data } = await axios.get("http://localhost:8000/api/auth/alluser", config);
+      const { data } = await axios.get("https://portfolio-backend-nine-lilac.vercel.app/api/auth/alluser", config);
       setUsers(data?.alluser);
     } catch (error) {
       console.log(error);
@@ -47,7 +47,7 @@ const Users = () => {
         }
       };
 
-      const {data} = await axios.delete(`http://localhost:8000/api/auth/delete-user/${id}`, config);
+      const {data} = await axios.delete(`https://portfolio-backend-nine-lilac.vercel.app/api/auth/delete-user/${id}`, config);
       if(data.success){
         toast.success(`User is Deleted`);
         getAllUser();
