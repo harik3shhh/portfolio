@@ -29,7 +29,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const { data } = await axios.post('http://localhost:8000/api/auth/login', input);
+      const { data } = await axios.post('https://portfolio-backend-nine-lilac.vercel.app/api/auth/login', input);
       console.log(data);
       if (data?.success) {
         setInput({ email: '', password: '' });
