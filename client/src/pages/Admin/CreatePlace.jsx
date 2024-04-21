@@ -21,7 +21,7 @@ const CreatePlace = () => {
     // GET ALL CATEGORY
     const getAllCategory = async () => {
         try {
-            const { data } = await axios.get('http://localhost:8000/api/v1/category/get-category');
+            const { data } = await axios.get('https://portfolio-backend-nine-lilac.vercel.app/api/v1/category/get-category');
             if (data?.success) {
                 setCategories(data?.category);
             }
@@ -47,7 +47,7 @@ const CreatePlace = () => {
             productData.append('photo', photo);
             productData.append('link', link)
 
-            const { data } = await axios.post('http://localhost:8000/api/v1/place/create-place', productData);
+            const { data } = await axios.post('https://portfolio-backend-nine-lilac.vercel.app/api/v1/place/create-place', productData);
             if (data?.success) {
                 toast.success('Product Created Successfully');
                 navigate('/dashboard/admin/places');
