@@ -12,7 +12,7 @@ export default function Home() {
 
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/v1/category/get-category");
+      const { data } = await axios.get("https://portfolio-backend-nine-lilac.vercel.app/api/v1/category/get-category");
       if (data?.success) {
         // setCategories(data?.category); // Uncomment if you need to set categories
       }
@@ -30,7 +30,7 @@ export default function Home() {
   const getAllProducts = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`http://localhost:8000/api/v1/place/place-list/${page}`);
+      const { data } = await axios.get(`https://portfolio-backend-nine-lilac.vercel.app/api/v1/place/place-list/${page}`);
       setLoading(false);
       setProducts(data?.products);
     } catch (error) {
@@ -41,7 +41,7 @@ export default function Home() {
 
   const getTotal = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/v1/place/place-count");
+      const { data } = await axios.get("https://portfolio-backend-nine-lilac.vercel.app/api/v1/place/place-count");
       setTotal(data?.total);
     } catch (error) {
       console.log(error);
@@ -56,7 +56,7 @@ export default function Home() {
   const loadMore = async () => {
     try {
       setLoading(true);
-      const { data } = await axios(`http://localhost:8000/api/v1/place/place-list/${page}`)
+      const { data } = await axios(`https://portfolio-backend-nine-lilac.vercel.app/api/v1/place/place-list/${page}`)
       setLoading(false);
       setProducts([...products, ...data?.products]);
     } catch (error) {
@@ -100,7 +100,7 @@ export default function Home() {
                 <div key={p._id} style={{ margin: '10px', padding: '10px', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', transition: 'transform 0.3s', backgroundColor: '#fff', maxWidth: '300px' }}>
                   <div style={{ textDecoration: 'none', color: 'inherit' }}>
                     <div>
-                      <img src={`http://localhost:8000/api/v1/place/place-photo/${p._id}`} style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '10px 10px 0 0' }} alt={p.name} />
+                      <img src={`https://portfolio-backend-nine-lilac.vercel.app/api/v1/place/place-photo/${p._id}`} style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '10px 10px 0 0' }} alt={p.name} />
                       <div style={{ padding: '10px' }}>
                         <h5 style={{ marginBottom: '10px' }}>{p.name}</h5>
                         <p>{p.description.substring(0, 30)}</p>
