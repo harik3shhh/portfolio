@@ -14,7 +14,7 @@ const CreateCategory = () => {
   // GET ALL CATEGORIES
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/v1/category/get-category");
+      const { data } = await axios.get("https://portfolio-backend-nine-lilac.vercel.app/api/v1/category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -37,7 +37,7 @@ const CreateCategory = () => {
         }
       };
 
-      const { data } = await axios.delete(`http://localhost:8000/api/v1/category/delete-category/${id}`, config);
+      const { data } = await axios.delete(`https://portfolio-backend-nine-lilac.vercel.app/api/v1/category/delete-category/${id}`, config);
       if (data.success) {
         toast.success(`Category is Deleted`);
         getAllCategory();
