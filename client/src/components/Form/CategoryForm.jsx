@@ -22,7 +22,7 @@ const CategoryForm = () => {
         e.preventDefault();
 
         try {
-            const url = 'http://localhost:8000/api/v1/category/create-category';
+            const url = 'https://portfolio-backend-nine-lilac.vercel.app/api/v1/category/create-category';
             const res = await fetch(url, {
                 method: 'POST',
                 headers: {
