@@ -10,7 +10,7 @@ const Places = () => {
     //GET ALL PRODUCTS
     const getAllProducts = async () => {
         try {
-            const { data } = await axios.get('http://localhost:8000/api/v1/place/get-place');
+            const { data } = await axios.get('https://portfolio-backend-nine-lilac.vercel.app/api/v1/place/get-place');
             setProducts(data.products);
         } catch (error) {
             console.log(error);
@@ -39,7 +39,7 @@ const Places = () => {
                                 <div key={p._id} className="m-4 p-4 rounded-lg shadow-md transition-transform bg-white max-w-md">
                                     <Link to={`/dashboard/admin/place/${p.slug}`} className="text-black no-underline">
                                         <div>
-                                            <img src={`http://localhost:8000/api/v1/place/place-photo/${p._id}`} alt={p.name} className="w-full h-48 object-cover rounded-t-lg" />
+                                            <img src={`https://portfolio-backend-nine-lilac.vercel.app/api/v1/place/place-photo/${p._id}`} alt={p.name} className="w-full h-48 object-cover rounded-t-lg" />
                                             <div className="p-4">
                                                 <h5 className="text-lg font-semibold mb-2">{p.name}</h5>
                                                 <p>{p.description.substring(0, 30)}</p>
