@@ -9,7 +9,7 @@ export default function PrivateRoute(){
     const [auth, setAuth] = useAuth();
 
     useEffect(()=> {
-        const url = "http://localhost:8000/api/auth/user-auth";
+        const url = "https://portfolio-backend-nine-lilac.vercel.app/api/auth/user-auth";
         const authCheck = async()=>{
             const res = await fetch(url, {
                 method: "GET",
