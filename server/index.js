@@ -12,7 +12,7 @@ const path = require("path");
 const port = process.env.PORT;
 
 const corsOptions = {
-    origin: "http://localhost:5173",
+    origin: "https://portfolio-alpha-seven-86.vercel.app/",
     methods: "GET, POST, PUT, DELETE, HEAD",
     credentials: true,
 };
