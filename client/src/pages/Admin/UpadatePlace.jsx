@@ -81,11 +81,11 @@ const UpdatePlace = () => {
       let answer = window.prompt('Are you sure want to delete Place ?');
       if (!answer) return;
       const { data } = await axios.delete(`https://portfolio-backend-nine-lilac.vercel.app/api/v1/place/delete-place/${id}`);
-      toast.success('Place Deleted Success');
+      toast.success('Project Deleted Success');
       navigate('/dashboard/admin/places');
     } catch (error) {
       console.log(error);
-      toast.error('Error while deleting place');
+      toast.error('Error while deleting Project');
     }
   };
 
@@ -99,7 +99,7 @@ const UpdatePlace = () => {
           </div>
           <div className="md:w-3/4">
             <div className="mx-auto w-3/4">
-            <h1 className="text-center mb-4">Update Place</h1>
+            <h1 className="text-center mb-4">Update Project</h1>
               <Select
                 bordered={false}
                 placeholder="Select a category"
