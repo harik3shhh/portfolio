@@ -103,7 +103,7 @@ export default function Home() {
                       <img src={`https://portfolio-backend-nine-lilac.vercel.app/api/v1/place/place-photo/${p._id}`} style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '10px 10px 0 0' }} alt={p.name} />
                       <div style={{ padding: '10px' }}>
                         <h5 style={{ marginBottom: '10px' }}>{p.name}</h5>
-                        <p>{p.description.substring(0, 30)}</p>
+                        <marquee behavior="" direction=""> <p>{p.description}</p></marquee>
                        {p.link && <NavLink to={p.link} target='_blank'><button className='bg-blue-900 text-white p-2 rounded'><span className="text-sm">Visit Project</span></button></NavLink>}
                       </div>
                     </div>
